@@ -1,10 +1,10 @@
-# Main Jac entry point
+# MindMate Harmony Space
 
-# Create demo user
-user_node = node.new("user", {"id": 1, "name": "Demo User"})
+node root {}
+node user {}
+node mood {}
 
-# Map walkers to frontend
-walker.map("log_mood", log_mood)
-walker.map("analyze_emotion", analyze_emotion)
-agent.map("generate_advice", generate_advice)
-agent.map("classify_mood", classify_mood)
+edge has_mood {}
+
+walker init_app {}
+walker create_demo_user {}
