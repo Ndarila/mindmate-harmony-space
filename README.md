@@ -1,6 +1,5 @@
 # MindMate Harmony Space 🧠💙
-
-AI-powered mental wellbeing companion built using **Jac / Jaseci**.
+AI-powered mental wellbeing companion built using Jac / Jaseci.
 
 ## Features
 - Emotional state tracking using OSP graph
@@ -15,8 +14,8 @@ AI-powered mental wellbeing companion built using **Jac / Jaseci**.
 - Python Jac Client
 
 ## Agents
-1. Mood Logger Agent
-2. Emotion Analyzer Agent
+1. Mood Logger Walker
+2. Emotion Analyzer Walker
 3. Feedback Generator Agent
 
 ## How to Run
