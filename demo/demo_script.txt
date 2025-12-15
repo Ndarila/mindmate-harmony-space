@@ -1,0 +1,19 @@
+Hello, this is a demo of MindMate Harmony Space.
+
+MindMate is an AI-powered mental wellbeing assistant built using the Jac programming language.
+
+In this demo, a user submits a short description of how they are feeling.
+The system logs this input as a mood node inside a graph structure.
+
+A separate emotion analysis agent then classifies the mood as positive, neutral, or negative.
+
+Based on this classification, a feedback agent generates empathetic suggestions
+designed to support emotional wellbeing.
+
+All interactions are modeled using an OSP graph, allowing the system to track
+emotional patterns over time.
+
+This architecture demonstrates how Jac can be used to build intelligent,
+agent-driven wellbeing applications.
+
+Thank you.
