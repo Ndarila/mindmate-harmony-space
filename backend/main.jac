@@ -1,36 +1,10 @@
-// MindMate Harmony Space
-// Core Jac Backend
+# Main Jac entry point
 
-node root {
-    has name = "MindMate Root";
-}
+# Create demo user
+user_node = node.new("user", {"id": 1, "name": "Demo User"})
 
-node user {
-    has user_id;
-    has name;
-}
-
-node mood {
-    has emotion;
-    has intensity;
-    has timestamp;
-}
-
-edge experiences {}
-
-walker init_app {
-    can root {
-        report "MindMate Harmony Space initialized";
-    }
-}
-
-walker create_user {
-    has user_id;
-    has name;
-
-    can root {
-        new_user = spawn user(user_id=user_id, name=name);
-        root ++> experiences ++> new_user;
-        report f"User {name} created successfully";
-    }
-}
+# Map walkers to frontend
+walker.map("log_mood", log_mood)
+walker.map("analyze_emotion", analyze_emotion)
+agent.map("generate_advice", generate_advice)
+agent.map("classify_mood", classify_mood)
