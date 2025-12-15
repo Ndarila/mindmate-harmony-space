@@ -1,19 +1,15 @@
-# MindMate Harmony Space - Python Client
-from jac_client import Jac
+import requests
 
-jac = Jac("http://localhost:8000")
+# Replace with your Jac server URL
+JAC_SERVER = "http://localhost:8000"
 
-print(jac.spawn("init_app"))
+def log_mood(mood_text):
+    payload = {"mood_text": mood_text}
+    r = requests.post(f"{JAC_SERVER}/spawn/log_mood", json=payload)
+    return r.json()
 
-print(jac.spawn("create_user", {
-    "user_id": "u1",
-    "name": "Test User"
-}))
-
-print(jac.spawn("log_mood", {
-    "emotion": "calm",
-    "intensity": 3,
-    "timestamp": "2025-12-15"
-}))
-
-print(jac.spawn("generate_feedback"))
+if __name__ == "__main__":
+    print("MindMate Harmony Space Demo")
+    mood_input = input("Enter your mood: ")
+    result = log_mood(mood_input)
+    print("Response from Jac backend:", result)
