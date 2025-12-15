@@ -1,0 +1,4 @@
+*.jir
+vcpkg/
+__pycache__/
+.env
