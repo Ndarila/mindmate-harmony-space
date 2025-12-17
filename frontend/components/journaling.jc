@@ -3,7 +3,11 @@
 
 function render_journaling() {
     print("=== Journaling ===")
-    print("Write your thoughts here...")
-    # Example: call Jac backend walker
-    # Spawn("save_journal_entry", journal_text)
+    
+    # Example journal text
+    journal_text = "Feeling great today!"
+
+    # Call Jac backend walker to save journal entry
+    result = Spawn("save_journal_entry", journal_text)
+    print("Journal entry saved:", result)
 }

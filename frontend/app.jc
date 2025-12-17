@@ -10,6 +10,7 @@ include "./components/weekly_tips.jc"
 # Initialize App
 function main() {
     print("MindMate Harmony Space Frontend Initialized")
+    
     render_mood_logging()
     render_journaling()
     render_graph_visualization()

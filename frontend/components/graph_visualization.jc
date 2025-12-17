@@ -3,6 +3,12 @@
 
 function render_graph_visualization() {
     print("=== Emotion-Trigger-Habit Graph ===")
-    # Example: Fetch graph data from Jac backend
-    # Spawn("fetch_emotion_graph")
+    
+    # Fetch graph data from Jac backend
+    graph_data = Spawn("fetch_emotion_graph")
+    
+    # Simple console output for demo
+    print("Graph Data:", graph_data)
+    
+    # TODO: Later, integrate visualization logic if Jac Client supports charts/graph rendering
 }

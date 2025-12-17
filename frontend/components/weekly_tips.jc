@@ -3,6 +3,8 @@
 
 function render_weekly_tips() {
     print("=== Weekly Tips ===")
-    # Example: call Jac backend walker
-    # Spawn("generate_weekly_tips")
+    
+    # Call Jac backend walker to generate tips
+    tips = Spawn("generate_weekly_tips")
+    print("Tips for the week:", tips)
 }

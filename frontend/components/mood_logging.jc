@@ -3,7 +3,11 @@
 
 function render_mood_logging() {
     print("=== Mood Logging ===")
-    print("Select mood: Happy, Sad, Angry, Neutral")
-    # Example: call Jac backend walker
-    # Spawn("log_mood", mood_selection)
+    
+    # Example: Select mood (for demo, we hardcode a mood)
+    mood_selection = "Happy"
+
+    # Call Jac backend walker to log mood
+    result = Spawn("log_mood", mood_selection)
+    print("Mood logged:", result)
 }
