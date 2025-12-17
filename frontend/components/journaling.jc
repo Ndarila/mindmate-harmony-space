@@ -1,0 +1,9 @@
+# journaling.jc
+# Journaling Component
+
+function render_journaling() {
+    print("=== Journaling ===")
+    print("Write your thoughts here...")
+    # Example: call Jac backend walker
+    # Spawn("save_journal_entry", journal_text)
+}

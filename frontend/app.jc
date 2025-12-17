@@ -1,0 +1,19 @@
+# app.jc
+# Main entry point for MindMate Harmony Space Jac Client frontend
+
+# Import components
+include "./components/mood_logging.jc"
+include "./components/journaling.jc"
+include "./components/graph_visualization.jc"
+include "./components/weekly_tips.jc"
+
+# Initialize App
+function main() {
+    print("MindMate Harmony Space Frontend Initialized")
+    render_mood_logging()
+    render_journaling()
+    render_graph_visualization()
+    render_weekly_tips()
+}
+
+main()

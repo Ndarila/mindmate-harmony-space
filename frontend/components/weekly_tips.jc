@@ -1,0 +1,8 @@
+# weekly_tips.jc
+# Weekly Tips Component
+
+function render_weekly_tips() {
+    print("=== Weekly Tips ===")
+    # Example: call Jac backend walker
+    # Spawn("generate_weekly_tips")
+}
