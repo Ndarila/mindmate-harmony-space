@@ -1,24 +1,54 @@
-# MindMate Harmony Space 🧠💙
-AI-powered mental wellbeing companion built using Jac / Jaseci.
+# MindMate Harmony Space (AI Mental-Wellbeing Companion) 🧠💙
+
+**Project Type:** AI Mental-Wellbeing Companion  
+**Backend:** JacLang  
+**Frontend:** Jac Client  
+**Branch:** jac-client-frontend
+
+---
+
+## Overview
+
+MindMate Harmony Space is a digital companion that tracks moods, identifies emotional patterns, and offers personalized coping strategies. The platform uses an **Object-Spatial Graph (OSP)** to model emotions, triggers, activities, and suggestions. The frontend interacts with the JacLang backend using **Spawn()** to call walkers for various tasks.
+
+---
 
 ## Features
-- Emotional state tracking using OSP graph
-- Multi-agent Jac walkers
-- AI feedback generation (byLLM-ready)
-- Python Jac Client for end-to-end interaction
 
-## Tech Stack
-- Jac Programming Language (Backend)
-- OSP Graph Modeling
-- Multi-Agent Walkers
-- Python Jac Client
+- **Mood Logging:** Log user moods and track emotional patterns.  
+- **Journaling:** Write and save personal thoughts and reflections.  
+- **Emotion Graph Visualization:** View emotion-trigger-habit relationships.  
+- **Weekly Tips:** Receive personalized wellness tips.
 
-## Agents
-1. Mood Logger Walker
-2. Emotion Analyzer Walker
-3. Feedback Generator Agent
+---
 
-## How to Run
+## Technical Details
+
+### Backend (JacLang)
+- Nodes: emotions, triggers, activities, suggestions, journal entries  
+- Walkers:
+  - `log_mood` — Logs user moods in the backend.  
+  - `save_journal_entry` — Saves journal entries for the user.  
+  - `fetch_emotion_graph` — Retrieves emotion-trigger-habit graph data.  
+  - `generate_weekly_tips` — Generates personalized weekly tips.  
+- byLLM functions for generating tips and analyzing emotional trends.
+
+### Frontend (Jac Client)
+- Components:
+  - `mood_logging.jc` — Mood logging interface.  
+  - `journaling.jc` — Journaling interface.  
+  - `graph_visualization.jc` — Emotion graph visualization.  
+  - `weekly_tips.jc` — Weekly tips display.  
+- Main entry: `app.jc`  
+- Uses `Spawn()` to call backend walkers for dynamic functionality.
+
+---
+
+## Setup Instructions
+
+1. **Clone the repository**
+
 ```bash
-jac serve backend/main.jac
-python client/client.py
+git clone https://github.com/Ndarila/mindmate-harmony-space.git
+cd mindmate-harmony-space
+git checkout jac-client-frontend
